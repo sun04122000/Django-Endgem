@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UploadsSub8</title>
+<link rel="icon" type="image/png" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2nNDkX2MhihU3qppMCQl1bjNHmh9WPDng7g&usqp=CAU">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#img1{
+float:left;
+width:3%;
+height:3%;
+}
+
+.header{
+color:white;
+background-color:black;
+padding-bottom:3px;
+}
+
+li{
+  padding left:25px;
+  padding-right:15px;
+  padding-top:15px;
+ padding-bottom:10px;
+ float:left;
+ background-color:#0a3170;
+ color:white;
+  }
+
+ul{
+list-style-type:none;
+background-color:black;
+width:1000px;
+margin-left:0px;
+}
+
+a{
+color:white;
+}
+
+.icn{
+color:white;
+background-color:black;
+border-left-style:none;
+}
+.active{
+background-color:rgb(190,99,71);}
+
+.sidenav {
+ height: 90%;
+ width:0;
+ position:fixed;
+ z-index:1;
+ top:0;
+ left:0;
+ background:#111;
+ overflow-x:hidden;
+ transition:0.5s;
+ padding-top:60px;
+ margin-top:177px;
+ }
+ 
+ .sidenav a {
+ padding: 8px 8px 8px 32px;
+ text-decoration:none;
+ font-size:20px;
+ color:#818181;
+ display:block;
+ transition:0.3s;
+ }
+ 
+ .sidenav a:hover {
+  color:#f1f1f1;
+  }
+ 
+.sidenav.closebtn {
+ position:absolute;
+top:0;
+right:25px;
+font-size:36px;
+margin-left:50px;
+}
+
+.recent{
+background-color:#f1f1f1;}
+
+.gender{
+width:5%;
+height:5%;
+border-radius:50%;
+}
+
+ 
+</style>
+</head>
+
+<body>
+<div class="header">
+ <p class="head" id="para1"> <img id="img1" src="https://media1.giphy.com/media/l1KVccToDJ6oz6qYg/giphy.gif"><h1>IGem </h1></p>
+ <p  style="text-align:right">
+{% if gender == 'Male' %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmixvRnL8c85xZsLxL-rxyyIArYnuyktu2ug&usqp=CAU" class="gender">
+{% endif %}
+{% if gender == 'Female' %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmzECoCXUkK-xEArINmJXHO_wznURZfNuUhA&usqp=CAU" class="gender">
+{% endif %}
+{{user}} {{enrollmentno}}
+</p>
+ <p style="text-align:right;word-spacing:10px"> {{branch}} {{year}}</p>
+ </div>
+<div style="background-color:#0a3170;margin-top:0px;"> 
+<ul>
+<li><a href="/mainpage/"><i class="fa fa-home" ></i></a></li>
+<li><a href="/upload/" class="top">{{sub1}}</a></li>
+<li><a href="/upload2/" class="top">{{sub2}}</a></li>
+<li><a href="/upload3/" class="top">{{sub3}}</a></li>
+<li><a href="/upload4/" class="top">{{sub4}}</a></li>
+<li><a href="/upload5/" class="top">{{sub5}}</a></li>
+<li><a href="/upload6/" class="top">{{sub6}}</a></li>
+<li><a href="/upload7/" class="top">{{sub7}}</a></li>
+<li><a href="/upload8/" class="active">{{sub8}}</a></li>
+</ul><br><br><br>
+</div>
+
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+<div id="mysidenav" class="sidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+<a href="#" class="recent">Uploads</a>
+<a href="/ContactUs/">Contact us</a>
+<a href="/signup3/Login/">LogOut</a>
+</div>
+
+<script>
+function openNav() {
+ document.getElementById("mysidenav").style.width = "250px" ;
+ }
+
+function closeNav() {
+document.getElementById("mysidenav").style.width = "0" ;
+}
+</script>
+
+
+<form method="POST" enctype="multipart/form-data" id="form">{% csrf_token %}
+🔗{{form}}<br><br>
+<input type="submit" value="Upload" style="margin-left:5px;"><br><br><br>
+</form>
+{% for myfile in myfiles %}
+<a href="file:///C:\Users\hp pc\Desktop\coursemat\igem\{{user}}\{{sub8}}\{{myfile}}" style="color:black;border:none;font-size:14px;">📑  {{myfile}}</a><br><br>
+<form method="POST" action="http://127.0.0.1:8000/delete8/">{% csrf_token %}
+<button type="submit" name="FilePath" value="C:/Users/hp pc/Desktop/coursemat/igem/{{user}}/{{sub8}}/{{myfile}}">🗑</button>
+</form>
+<br><br>
+{% endfor %}
+</body>
+</html>

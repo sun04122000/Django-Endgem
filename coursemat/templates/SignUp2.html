@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>SignUp2</title>
+   <link rel="icon" type="image/png" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2nNDkX2MhihU3qppMCQl1bjNHmh9WPDng7g&usqp=CAU">
+    <style>
+  #img1{
+     width:5%;
+     height:5%;
+     float:left;
+     background-color:white;
+    position:fixed;
+    }
+
+ h1{
+   backgroun-color:green;
+   padding-top: 2px;
+   font-size:50px;
+   position:fixed;
+   color: white;
+    }
+
+body{
+   background-color:#4E0027;
+}
+
+.page{
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyotrUzGu0lXFVA70UOAg6DWOpU9k310EiQA&usqp=CAU");
+   background-size:100%;
+   margin-left:20px;
+   margin-right:20px;
+   }
+
+ label{
+  font-size:22px;
+  }
+  input,submit{
+    background-color:#4E0027;
+   color:white;
+    font-size:22px;
+   margin-top:30px;
+  margin-left:50%;
+ }
+
+ select{
+ background-color:#4E0027;
+   color:white;
+    font-size:22px;
+   margin-top:25px;
+   margin-left:50%;
+}
+
+#sub{
+margin-left:50%;
+ } 
+
+#para{
+ text-align:center;
+}
+
+#para3{
+text-align: right;
+}
+
+#para4{
+font-size:22px;
+margin-bottom:2px;
+margin-left:40%;
+}
+
+#y1{
+ margin-top:2px;
+}
+
+#lab{
+ margin-left:40%;
+ margin-top:30%;
+}
+
+.page{
+position:fixed;
+border-style:solid;
+border-color:black;
+left:10%;
+top:5%;
+}
+
+#img2{
+left:10%;
+width:20%;
+height:600px;
+margin-top:5%;
+float:left;
+}
+
+</style>
+</head>
+  <body>
+  <p id="para1"> <img id="img1" src="https://media1.giphy.com/media/l1KVccToDJ6oz6qYg/giphy.gif">
+          <h1>IGem</h1></p><br>
+ 
+  <div class="page">
+<form id="forms" method="post" action="/signup2/">{% csrf_token %}
+   <label for="enroll" id="lab">📋Enrollment No.:</label>
+  <input type="number" id="enroll" name="EnrollmentNo">
+   <label for="branch" id="lab">📋Branch:</label>
+    <select id="branch" name="Branch">
+    <option value="Architecture and Planning">Architecture and Planning</option>
+    <option value="Applied Science and Engineering">Applied Science and Engineering</option>
+    <option value="Biotechnology">Biotechnology</option>
+    <option value="Chemical Engineering">Chemical Engineering</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Civil Engineering">Civil Engineering</option>
+    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+    <option value="Earthquake Engineering">Earthquake Engineering</option>
+    <option value="Earth Sciences">Earth Sciences</option>
+    <option value="Electrical Engineering">Electrical Engineering</option>
+    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+    <option value="Humanities and Social Sciences">Humanities and Social Sciences</option>
+    <option value="Hydrology">Hydrology</option>
+    <option value="Hydro and Renewable Energy">Hydro and Renewable Energy</option>
+    <option value="Management Studies">Management Studies</option>
+    <option value="Mathematics">Mathematics</option>
+    <option value="Machanical and Industrial Engineering">Machanical and Industrial Engineering</option>
+    <option value="Metallurgical and Materials Engineering">Metallurgical and Materials Engineering</option>
+    <option value="Paper Technology">Paper Technology</option>
+    <option value="Polymer and Process Engineering">Polymer and Process Engineering</option>
+    <option value="Physics">Physics</option>
+    <option value="Water Resources Development and Management">Water Resources Development and Management</option>
+    </select><br>
+
+    <p id="para4">📋Year of Study:</p><br>
+    <input type="radio" id="y1" name="YearofStudy" value="I year">
+    <label for="y1">I year</label><br>
+    <input type="radio" id="y2" name="YearofStudy" value="II year">
+    <label for="y2">II year</label><br>
+    <input type="radio" id="y3" name="YearofStudy" value="III year">
+    <label for="y3">III year</label><br>
+    <input type="radio" id="y4" name="YearofStudy" value="IV year">
+    <label for="y4">IV year</label><br>
+    <input type="radio" id="y5" name="YearofStudy" value="V year">
+    <label for="y5">V year</label><br>
+
+    <input type="submit" id="sub" name="next">
+</form>
+<h4><p id="para"> &#128525; thanks for using igem</p></h4>
+<p id="para3">made with &#128147; by ...</p>
+</div>
+  </body>
+ </html>

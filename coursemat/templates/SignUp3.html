@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>SignUp3</title>
+   <link rel="icon" type="image/png" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2nNDkX2MhihU3qppMCQl1bjNHmh9WPDng7g&usqp=CAU">
+    <style>
+  #img1{
+     width:5%;
+     height:5%;
+     float:left;
+     background-color:white;
+    position:fixed;
+    }
+
+p{
+text-indent:15px;
+font-size:24px;
+}
+
+ h1{
+   backgroun-color:green;
+   padding-top: 2px;
+   font-size:50px;
+   position:fixed;
+   color: white;
+    }
+
+body{
+   background-color:#4E0027;
+}
+
+.page{
+   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyotrUzGu0lXFVA70UOAg6DWOpU9k310EiQA&usqp=CAU");
+   background-size:100%;
+   margin-left:20px;
+   margin-right:20px;
+   }
+
+ label{
+  font-size:20px;
+  margin-top:2px;
+ margin-left:40%;
+  }
+  input,submit{
+    background-color:#4E0027;
+   color:white;
+    font-size:22px;
+  margin-left:50%;
+ margin-bottom:5px;
+ }
+
+#para{
+ text-align:center;
+}
+
+#para3{
+text-align: right;
+}
+
+.page{
+border-style:solid;
+border-color:black;
+left:10%;
+top:5%;
+}
+
+#img2{
+left:10%;
+width:20%;
+height:600px;
+margin-top:5%;
+float:left;
+}
+
+</style>
+</head>
+  <body>
+  <p id="para1"> <img id="img1" src="https://media1.giphy.com/media/l1KVccToDJ6oz6qYg/giphy.gif">
+          <h1>IGem</h1></p><br>
+ 
+  <div class="page">
+<form id="forms" method="post" action="/signup3/">{% csrf_token %}
+<p>Enter the subject codes which u study and leave the boxes empty for which you have no subject code to fill.</p`><br>
+
+<label for="sub1" >I Subject Code :</label>
+   <input id="sub1" type="text" name="I_SubjectCode"><br>
+
+<label for="sub2">II Subject Code : </label>
+   <input id="sub2" type="text" name="II_SubjectCode"><br>
+
+<label for="sub3">III Subject Code : </label>
+   <input id="sub3" type="text" name="III_SubjectCode"><br>
+
+<label for="sub4">IV Subject Code :</label>
+   <input id="sub4" type="text" name="IV_SubjectCode"><br>
+
+<label for="sub5">V Subject Code :</label>
+   <input id="sub5" type="text" name="V_SubjectCode"><br>
+
+<label for="sub6">VI Subject Code :</label>
+   <input id="sub6" type="text" name="VI_SubjectCode"><br>
+
+<label for="sub7">VII Subject Code :</label>
+   <input id="sub7" type="text" name="VII_SubjectCode"><br>
+
+<label for="sub8"> VIII Subject Code :</label>
+   <input id="sub8" type="text" name="VIII_SubjectCode"><br>
+
+   <input type="submit" id="sub" name="next">
+</form>
+<h4><p id="para"> &#128525; thanks for using igem</p></h4>
+<p id="para3">made with &#128147; by ...</p>
+</div>
+  </body>
+ </html>

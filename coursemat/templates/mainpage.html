@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+<link rel="icon" type="image/png" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2nNDkX2MhihU3qppMCQl1bjNHmh9WPDng7g&usqp=CAU">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#img1{
+float:left;
+width:3%;
+height:3%;
+}
+
+a{color:white;}
+button{background-color:black;}
+
+.topnav{
+background-color:#390087;
+font-size:20px;
+padding-top:3px;
+}
+
+.icn{
+color:white;
+}
+
+.header{
+color:white;
+background-color:black;
+padding-bottom:3px;
+}
+
+.gender{
+width:5%;
+height:5%;
+border-radius:50%;
+}
+</style>
+</head>
+
+<div class="header">
+ <p class="head" id="para1"> <img id="img1" src="https://media1.giphy.com/media/l1KVccToDJ6oz6qYg/giphy.gif"><h1>IGem </h1></p>
+ <p  style="text-align:right">
+{% if gender == 'Male' %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmixvRnL8c85xZsLxL-rxyyIArYnuyktu2ug&usqp=CAU" class="gender">
+{% endif %}
+{% if gender == 'Female' %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmzECoCXUkK-xEArINmJXHO_wznURZfNuUhA&usqp=CAU" class="gender">
+{% endif %}
+{{user}} {{enrollmentno}}
+</p>
+ <p style="text-align:right;word-spacing:10px"> {{branch}} {{year}}</p>
+ </div>
+
+<div class="topnav">
+<button class="icn"><a href="#"><i class="fa fa-home" ></i></a></button>
+
+ <button><a href="/upload/">{{sub1}}</a></button>
+ 
+ <button><a href="/upload2/">{{sub2}}</a></button>
+ 
+ <button><a href="/upload3/">{{sub3}}</a></button>
+ 
+ <button><a href="/upload4/">{{sub4}}</a></button>
+ <button><a href="/upload5/">{{sub5}}</a></button>
+ <button><a href="/upload6/">{{sub6}}</a></button>
+ <button><a href="/upload7/">{{sub7}}</a></button>
+ <button><a href="/upload8/">{{sub8}}</a></button>
+</div>
+
+
+  <h4>Welcome to Igem!</h4>
+  <p>The Doc&Tori Foundation has this time come up with an app  that provides a well structured way to properly maintain and store your complete course material.
+  This app is user-friendly app with unique feature of uploading your course content subject wise.Besides this it  contains no advertisements so as to provide utmost convenience to the user.
+  Found in 2020 by Doc & Tori, Igem/Endgem has come up a long way from its beginning in the Pandemic.<br>
+  The passion for helping students to manage their academics along with their busy schedules gave them the impetus to turn their hard work and inspiration into to a booming online virtual storage app.<br>
+
+  We now serve customers all over India, and are thrilled to be a part of the accessable wing of the education industry.<br>
+  We hope you enjoy our products as much as we enjoy offering them to you.<br>
+
+  <p>If you have any queries or recommendations, please donot hesitate to contact us on DocTori@slack.com</p>
+
+
+  Sincerely,<br>
+  Doc & Tori<br> [ Founder of Igem]
+</p>
+</body>
+</html>

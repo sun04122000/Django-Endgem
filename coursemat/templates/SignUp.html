@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>SignUp</title>
+<link rel="icon" type="image/png" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2nNDkX2MhihU3qppMCQl1bjNHmh9WPDng7g&usqp=CAU">
+<style>
+img{
+    width:10%;
+    height:10%;
+    float:left;
+    background-color:white;
+    }
+
+ h4{
+   backgroun-color:green;
+   padding-top: 2px;
+    }
+
+ #para1{
+   border-style: solid;
+   border-color:purple;
+   border-size:5px;
+   }
+ body{
+    border-style: solid;
+   border-color:#4E0027;
+   border-size:5px;
+   background-image: url("https://designshack.net/wp-content/uploads/background-textures.png");
+   backgroud-size:100%;
+   }
+
+  label{
+  text-align:center;
+  padding-left:45%;
+  font-size:22px;
+  }
+  input,submit{
+    background-color:#4E0027;
+   color:white;
+    font-size:22px;
+   margin-top:30px;
+ }
+
+#sub{
+margin-left:50%;
+ }
+
+#para{
+ text-align:center;
+}
+
+#para3{
+text-align: right;
+}
+</style>
+</head>
+<body>
+<p id="para1"> <img src="https://media1.giphy.com/media/l1KVccToDJ6oz6qYg/giphy.gif">
+          <h4>IGem</h4></p>
+<form method="post" action="/signup/">{% csrf_token %}
+<label for="mail">&#128142;EmailId : </label>
+<input id="mail" type="text" name="EmailId"><br>
+
+<label for="ph1">&#128142;Male          </label>
+<input id="ph1" type="radio" name="Gender" value="Male"><br>
+
+<label for="ph2">&#128142;Female</label>
+<input id="ph2" type="radio" name="Gender" value="Female" ><br>
+
+<label for="user">&#128142;Username:</label>
+<input id="user" type="text" name="Username"><br>
+<label for="pass">&#128142;Password:</label>
+<input id="pass" type="password" name="Password"><br>
+<input id="sub" type="submit" name="next">
+</form>
+<h4><p id="para"> &#128525; thanks for using igem</p></h4>
+<p id="para3">made with &#128147; by ...</p>
+</body>
+</html>
